@@ -13,7 +13,7 @@ import Testimonial from "./Components/Pages/Testimonial/Testimonial";
 import HealthBenefits from "./Components/Pages/HealthBenefits/HealthBenefits";
 import Products from "./Components/Pages/Products/Products";
 import LandingPage from "./Components/Pages/LandingPage/LandingPage";
-// const Home = React.lazy(() => import("./Components/Pages/Home/Home"));
+
 
 
 
@@ -42,14 +42,14 @@ function App() {
         <ScrollTop />
         <ScrollBar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/healty-benefits" element={<HealthBenefits />} />
             <Route path="/testimonial" element={<Testimonial />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/bulk-orders" element={<LandingPage />} />
-          
+             <Route path="*" element={<NotFound/>}/>
           </Routes>
       </AppProvider>
     </div>
