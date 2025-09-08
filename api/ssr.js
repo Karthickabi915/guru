@@ -104,6 +104,8 @@ export default async function handler(req, res) {
           <h1>Server Side Rendering Error</h1>
           <p>${err.message}</p>
           <pre>${err.stack}</pre>
+          <p>${req.url}</p>
+          <p>${renderResult.html}</p>
         </body>
       </html>
     `);
