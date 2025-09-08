@@ -7,12 +7,12 @@ const SEO = ({
   description = 'Default description for your website',
   keywords = 'default, keywords',
   image = logo,
-  url = 'https://guru-uruthi-frontend.vercel.app',
+  url = 'https://guru-vite.vercel.app',
   type = 'website',
   author = 'Guru uruthi',
   siteName = 'guruvalueproducts'
 }) => {
-  const siteUrl =  'https://guru-uruthi-frontend.vercel.app';
+  const siteUrl =  'https://guru-vite.vercel.app';
   const fullUrl = `${siteUrl}${url}`;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
