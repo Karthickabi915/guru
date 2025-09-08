@@ -1,0 +1,37 @@
+.scroll-to-top {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 30px !important;
+    height: 30px !important;
+    background-color: rgb(176, 176, 176) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 100000000;
+  }
+  
+  .scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px !important;
+      right: 20px !important;
+    }
+  }
+  

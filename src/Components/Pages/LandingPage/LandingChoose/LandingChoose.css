@@ -1,0 +1,194 @@
+
+.landing-choose-us {
+  padding: 30px 0;
+  background-color: black;
+}
+
+
+
+/* Landing Choose Card Styles */
+.landing-choose-card {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  width: 400px !important;
+  margin: 0px auto !important;
+  display: block !important;
+}
+
+
+.landing-choose-card:hover {
+  box-shadow: 
+    0 20px 40px rgba(22, 163, 74, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.12);
+  border-color: rgba(22, 163, 74, 0.2);
+}
+
+/* Card Icon Wrapper */
+.card-icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: all 0.4s ease;
+  transform: scale(0.8);
+}
+
+.landing-choose-card:hover .card-icon-bg {
+  opacity: 0.2;
+  transform: scale(1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.landing-choose-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Card Content */
+.card-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.card-title {
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.landing-choose-card:hover .card-title {
+  color: #16a34a;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.landing-choose-card:hover .card-description {
+  color: #475569;
+}
+
+/* Accent Line */
+.card-accent-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  border-radius: 2px 2px 0 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.landing-choose-card:hover .card-accent-line {
+  opacity: 1;
+  width: 80px;
+}
+
+/* Background Pattern */
+.landing-choose-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(22, 163, 74, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.landing-choose-card:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .landing-choose-card {
+    padding: 24px 16px;
+    border-radius: 16px;
+    max-width: 95%;   /* almost full width on small screens */
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+
+  .card-icon-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Extra small devices (phones < 480px) */
+@media (max-width: 480px) {
+  .landing-choose-card {
+    padding: 20px 12px;
+    border-radius: 12px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-description {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .card-icon {
+    font-size: 1.8rem;
+  }
+}

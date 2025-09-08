@@ -1,0 +1,156 @@
+.testimonials-section {
+  padding: 50px 80px;
+  background: #f7f7f7;
+}
+
+.testimonials-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.testimonial-title {
+  font-size: 28px;
+  color: #314252;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: "Playfair Display", serif;
+  margin: 0px;
+}
+
+.testimonial-arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn.prev {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #222;
+  margin-right: 10px;
+}
+
+.arrow-btn.next {
+  background: #34c759; /* green */
+  color: #fff;
+}
+
+
+/* Testimonial Card */
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  min-height: 250px;
+  display: flex !important;
+  width: 90% !important;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slick-arrow{
+    display: none !important;
+}
+
+.quote-icon {
+  font-size: 22px;
+  color: #34c759;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #222;
+}
+
+.testimonial-role {
+  font-size: 13px;
+  color: #777;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 2px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .testimonials-section {
+    padding: 40px 40px;
+  }
+  .testimonial-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 30px 20px;
+  }
+  .testimonial-title {
+    font-size: 22px;
+  }
+  .testimonial-card {
+    min-height: auto;
+    margin: auto;
+  }
+}
+
+
+/* @media (max-width:992px) {
+  .test>.slick-list>.slick-track>.slick-slide{
+  width: 442px !important;
+}
+
+.slick-cloned{
+  display: none !important;
+}
+} */
+
+
+

@@ -1,0 +1,304 @@
+ .landing-container {
+          background: white;
+          font-family: "Mulish", sans-serif;
+        }
+
+        .landing-title {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 16px;
+          color: #1f2937;
+          font-family: "Mulish", sans-serif;
+        }
+
+        .landing-dropdown-wrapper {
+        transform: translateZ(0); 
+opacity: 0.99; 
+position: relative; 
+overflow: hidden;
+filter: blur(0px)
+        }
+
+        .landing-dropdown-button {
+          width: 100%;
+          padding: 12px 16px;
+          text-align: left;
+          background: white;
+          border: 1px solid #d1d5db;
+          border-radius: 6px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+          transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .landing-dropdown-button:hover {
+          border-color: #9ca3af;
+        }
+
+        .landing-dropdown-button:focus {
+          outline: none;
+          border-color: #3b82f6;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .landing-dropdown-text {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #374151;
+        }
+
+        .landing-dropdown-placeholder {
+          color: #9ca3af;
+        }
+
+        .landing-dropdown-arrow {
+          width: 20px;
+          height: 20px;
+          color: #6b7280;
+          transition: transform 0.2s;
+        }
+
+        .landing-dropdown-arrow.landing-open {
+          transform: rotate(180deg);
+        }
+
+        .landing-dropdown-menu {
+       
+          top: calc(100% + 4px);
+          left: 0;
+          right: 0;
+          background: white;
+          border: 1px solid #d1d5db;
+          border-radius: 6px;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          max-height: 240px;
+          overflow-y: auto;
+          z-index: 9999;
+        }
+
+        .landing-option-item {
+          display: flex;
+          align-items: center;
+          padding: 12px 16px;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+
+        .landing-option-item:hover {
+          background-color: #f9fafb;
+        }
+
+        .landing-checkbox {
+          margin-right: 12px;
+          width: 16px;
+          height: 16px;
+          accent-color: #3b82f6;
+        }
+
+        .landing-option-text {
+          font-size: 14px;
+          color: #1f2937;
+        }
+
+        .landing-selected-section {
+          margin-top: 16px;
+        }
+
+        .landing-selected-title {
+          font-size: 14px;
+          font-weight: 500;
+          color: #374151;
+          margin-bottom: 8px;
+        }
+
+        .landing-tags-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .landing-tag {
+          display: inline-flex;
+          align-items: center;
+          padding: 6px 12px;
+          background-color: #dbeafe;
+          color: #1e40af;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        .landing-tag-remove {
+          margin-left: 8px;
+          width: 16px;
+          height: 16px;
+          border: none;
+          background: none;
+          color: #1e40af;
+          cursor: pointer;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          line-height: 1;
+        }
+
+        .landing-tag-remove:hover {
+          background-color: rgba(30, 64, 175, 0.1);
+        }
+
+        .phone-input-wrapper {
+  width: 100%;
+
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-tel-input .form-control {
+    margin-left: 30px !important;
+    width: 92% !important;
+}
+
+.phone-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.phone-input {
+  width: 100% !important;
+  padding: 20px !important;
+  font-size: 16px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.phone-input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.phone-dropdown {
+  border-radius: 8px 0 0 8px !important;
+}
+
+@media (max-width: 768px) {
+  .phone-input-wrapper {
+    max-width: 100%;
+  }
+
+  .phone-input {
+    font-size: 14px !important;
+    padding: 10px 12px !important;
+  }
+}
+
+
+.flex{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+
+
+.landing-about {
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+/* .landing-about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(255,255,255,0.03) 0%, transparent 50%);
+  pointer-events: none;
+} */
+
+.landing-about-hero {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+}
+
+.landing-about-hero-content {
+  animation: slideInLeft 1s ease-out;
+}
+
+.landing-about-title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+   line-height: 1.6;
+}
+
+@keyframes titleGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.landing-about-subtitle {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.landing-about-subtitle strong {
+  color: black;
+  font-weight: 700;
+}
+
+.landing-about-badges {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.landing-about-badge {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: rgba(255,255,255,0.15);
+
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.landing-about-badge:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}

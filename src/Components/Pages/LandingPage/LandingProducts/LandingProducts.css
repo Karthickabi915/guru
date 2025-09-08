@@ -1,0 +1,46 @@
+.products-landings {
+  width: 100% !important;          /* Take full width */
+  max-width: 500px !important;     /* Limit to 500px on large screens */
+  display: flex !important;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 
+    0 20px 40px rgba(22, 163, 74, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Slick list padding */
+.add > .slick-list {
+  padding: 20px;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .products-landings {
+    max-width: 90% !important;  /* shrink container */
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .add > .slick-list {
+    padding: 15px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .products-landings {
+    max-width: 100% !important;
+    padding: 6px;
+    gap: 10px;
+    box-shadow: 
+      0 10px 20px rgba(22, 163, 74, 0.1),
+      0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .add > .slick-list {
+    padding:10px 0px;
+  }
+}

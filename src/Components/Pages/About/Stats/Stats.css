@@ -1,0 +1,103 @@
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px; /* extra gap for wrapping */
+  margin: 30px 10px 0px 10px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  min-width: 200px; /* so items don’t get too narrow */
+}
+
+.stat-icon {
+  height: 32px;
+  width: 32px;
+  color: #056839;
+  margin-bottom: 8px;
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: bold;
+  color: #056839;
+}
+
+.stat-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #999999;
+  font-family: "Playfair Display", serif;
+}
+
+/* -------- Responsive Styles -------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .stat-number {
+    font-size: 20px;
+  }
+  .stat-label {
+    font-size: 14px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .stat-box {
+    flex-direction: row; /* keep icon beside text */
+    width: 100%;
+    justify-content:center;
+    gap: 15px;
+  }
+
+  .stat-icon {
+    height: 28px;
+    width: 28px;
+  }
+
+  .stat-number {
+    font-size: 18px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+  }
+}
+
+
+
+@media (max-width:992px) {
+    .stats-container{
+        justify-content: center;
+        gap: 30px;
+        margin: 10px;
+    }
+}
+
+@media (max-width:660px) {
+    .stats-container{
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
+
+p{
+    margin: 0px;
+}

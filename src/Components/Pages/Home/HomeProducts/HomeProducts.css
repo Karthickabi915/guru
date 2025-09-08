@@ -1,0 +1,272 @@
+.product-carousel {
+  position: relative;
+  padding:30px  20px;
+  background-color: black;
+}
+
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 10px;
+}
+
+/* Custom arrow buttons */
+.carousel-arrow {
+  position: absolute;
+  top: -50px;
+  background: #fff;
+  color: #333;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-arrow.next {
+  right: 10px;
+}
+
+.carousel-arrow.prev {
+  right: 50px;
+}
+
+.product-card {
+  display: flex !important;
+  width: 100% !important;
+  align-items: center;
+  justify-content: space-between;
+  background: #f3faf3;
+  border-radius: 190px;
+  padding: 50px;
+  margin: 20px auto;
+  gap: 40px;
+}
+
+.product-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.product-subtitle {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.product-title {
+  font-size: 28px;
+  color: #314252;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: "Playfair Display", serif;
+  margin: 10px 0;
+}
+
+.product-desc {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  text-align: start;
+  font-family: "Mulish", sans-serif;
+  margin-bottom: 12px;
+}
+
+
+
+.shop-btn {
+  background: #008000; /* green */
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s;
+}
+
+.shop-btn span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.shop-btn:hover span {
+  color: #fff;   /* if you want text color */
+  background: #7abb2c; /* if you want background change */
+}
+
+.product-image {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 300px;
+  height: auto;
+  display: inline-block;
+}
+
+
+.product-card h3 {
+  font-size: 28px;
+  color: #314252;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: "Playfair Display", serif;
+  margin: 10px 0;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  color: #056839;
+  font-weight: 700;
+  line-height: 1.3;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+
+
+
+.product-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.product-card li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+  font-family: "Mulish", sans-serif;
+  margin-bottom: 10px;
+}
+
+.product-card li img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+} 
+
+@media (max-width:1265px) {
+  .product-card {
+    border-radius: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* 📱 Tablet: 2-column stack with smaller padding */
+@media (max-width: 1024px) {
+  .product-card {
+    width: 90% !important;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+
+  .product-content {
+    flex: 1 1 50%;
+    text-align: left;
+  }
+
+  .product-image {
+    flex: 1 1 50%;
+    text-align: center;
+  }
+
+  .product-image img {
+    max-width: 250px;
+  }
+}
+
+/* 📱 Mobile: stack content vertically */
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .product-content {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .product-title,
+  .product-card h3 {
+    font-size: 24px;
+  }
+
+  .product-card h2 {
+    font-size: 18px;
+  }
+
+  .product-desc,
+  .product-card li {
+    font-size: 14px;
+  }
+
+  .product-image img {
+    max-width: 200px;
+  }
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+  .product-card {
+    padding: 5px;
+    width: 95% !important;
+  }
+
+  .product-content{
+   width: 100%;
+   min-width: 0px;
+  }
+
+  .product-card:last-child{
+    width: 100%;
+  }
+.product-card ul{
+  width: 95%;
+}
+  .product-title,
+  .product-card h3 {
+    font-size: 20px;
+  }
+
+  .shop-btn {
+    font-size: 12px;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .shop-btn span {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
+

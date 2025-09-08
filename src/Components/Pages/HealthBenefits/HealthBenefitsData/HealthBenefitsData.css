@@ -1,0 +1,358 @@
+/* HealthBenefits.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.health-benefits-page {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header-benefits {
+  background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-benefits::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  0% { 
+    transform: translateX(-50px) translateY(-50px) rotate(0deg); 
+  }
+  100% { 
+    transform: translateX(-50px) translateY(-50px) rotate(360deg); 
+  }
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.header-benefits h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: slideInDown 1s ease-out;
+}
+
+.header-benefits p {
+  font-size: 1.3em;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+  animation: slideInUp 1s ease-out 0.3s both;
+}
+
+@keyframes slideInDown {
+  from { 
+    transform: translateY(-50px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes slideInUp {
+  from { 
+    transform: translateY(50px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+/* Products Section */
+.products-section {
+  padding: 30px 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.products-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f8f8 100%);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.products-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #2d5016, #4a7c59);
+}
+
+.products-card:hover {
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  background: linear-gradient(145deg, #ffffff 0%, #f0f8f0 100%);
+}
+
+.products-title {
+  font-size: 2em;
+  color: #2d5016;
+  margin-bottom: 20px;
+  position: relative;
+   font-family: "Playfair Display", serif;
+}
+
+.products-subtitle {
+  color: #666;
+  font-style: italic;
+  font-size: 1.1em;
+   font-family: "Playfair Display", serif;
+}
+
+.benefits-list {
+  list-style: none;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(77, 124, 89, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(77, 124, 89, 0.1);
+  transform: translateX(5px);
+}
+
+.benefit-icon {
+  width: 24px;
+  height: 24px;
+  background: #4a7c59;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.benefit-text {
+  flex: 1;
+}
+
+.benefit-title {
+  font-weight: bold;
+  color: #2d5016;
+  font-size: 18px;
+  margin-bottom: 5px;
+   font-family: "Playfair Display", serif;
+}
+
+.benefit-description {
+  color: #666;
+  font-size:16px;
+    font-family: "Mulish", sans-serif;
+}
+
+.nutrition-section {
+  background: linear-gradient(135deg, #4a7c59 0%, #2d5016 100%);
+  color: white;
+  padding: 80px 0;
+}
+
+.nutrition-heading {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+     font-family: "Playfair Display", serif;
+}
+
+.nutrition-subheading {
+  text-align: center;
+  font-size: 1.2em;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+       font-family: "Mulish", sans-serif;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.nutrition-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nutrition-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.nutrition-icon {
+  font-size: 3em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.nutrition-title {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: #fff;
+     font-family: "Playfair Display", serif;
+}
+
+.nutrition-description {
+  opacity: 0.9;
+  font-size: 0.95em;
+      font-family: "Mulish", sans-serif;
+}
+
+.cta-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5em;
+  color: #2d5016;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.cta-content p {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 40px;
+   font-family: "Mulish", sans-serif;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #4a7c59 0%, #2d5016 100%);
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(77, 124, 89, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(77, 124, 89, 0.4);
+}
+
+@media (max-width: 768px) {
+  .header-benefits h1 {
+    font-size: 2.2em;
+  }
+  
+  .header-benefits p {
+    font-size: 1.1em;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-card {
+    padding: 30px 20px;
+  }
+  
+  .nutrition-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .cta-content h2 {
+    font-size: 2em;
+  }
+  
+  .nutrition-heading {
+    font-size: 2em;
+  }
+   .products-card{
+   padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-benefits h1 {
+    font-size: 1.8em;
+  }
+  
+  .product-title {
+    font-size: 1.6em;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8em;
+  }
+  
+  .nutrition-heading {
+    font-size: 1.8em;
+  }
+  .products-card{
+   padding: 15px;
+  }
+
+  .products-card>ul{
+    padding:0px;
+  }
+}
+
+
+  .products-card>ul{
+    padding:0px;
+  }
