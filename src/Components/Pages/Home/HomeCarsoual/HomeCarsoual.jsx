@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
 import ExampleCarouselImage from "../../../../assets/Images/header-image-1.png";
 import ExampleCarouselImage1 from "../../../../assets/Images/header-image-2.png";
 import ExampleCarouselImage2 from "../../../../assets/Images/header-image-3.png";
@@ -11,7 +10,7 @@ import step2 from "../../../../assets/Images/cho.jpg";
 import packing from "../../../../assets/Images/packing.jpg";
 import "./HomeCarsoual.css";
 import { Link, useNavigate } from "react-router-dom";
-import { FaArrowRightLong } from "react-icons/fa6";
+import  {FaArrowRightLong}  from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { FaLeaf, FaSeedling, FaSpa } from "react-icons/fa";
 
@@ -103,7 +102,7 @@ const HomeCarsoual = () => {
         </motion.div>
       </motion.div>
 
-      <div className="home-container-carousel">
+      {/* <div className="home-container-carousel">
         <Carousel fade>
           <Carousel.Item>
             <div className="image-container">
@@ -283,7 +282,7 @@ const HomeCarsoual = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </div>
+      </div> */}
     </section>
   );
 };
