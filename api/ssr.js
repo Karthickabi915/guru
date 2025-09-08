@@ -105,7 +105,6 @@ export default async function handler(req, res) {
           <p>${err.message}</p>
           <pre>${err.stack}</pre>
           <p>${req.url}</p>
-          <p>${renderResult.html}</p>
         </body>
       </html>
     `);
