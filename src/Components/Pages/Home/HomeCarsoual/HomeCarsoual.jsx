@@ -13,9 +13,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomeCarsoual.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { FaLocationDot } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { FaLeaf, FaSeedling, FaAppleAlt, FaSpa } from "react-icons/fa";
+import { FaLeaf, FaSeedling, FaSpa } from "react-icons/fa";
 
 const HomeCarsoual = () => {
   const navigate = useNavigate();

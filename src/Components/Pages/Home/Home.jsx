@@ -21,7 +21,7 @@ const Home = () => {
      />
 
       <Header />
-      {/* <HomeCarsoual /> */}
+      <HomeCarsoual />
       <Stats />
       <AboutUs />
       <WhyChooseUs />
