@@ -22,12 +22,12 @@ const Home = () => {
 
       <Header />
       {/* <HomeCarsoual />
-      <Stats />
+      <Stats /> */}
       <AboutUs />
       <WhyChooseUs />
       <HomeProducts />
       <ProcessSteps />
-      <HomeTestimonial/> */}
+      <HomeTestimonial/>
       <Footer />
     </section>
   );
