@@ -21,8 +21,8 @@ const Home = () => {
      />
 
       <Header />
-      {/* <HomeCarsoual />
-      <Stats /> */}
+      {/* <HomeCarsoual /> */}
+      <Stats />
       <AboutUs />
       <WhyChooseUs />
       <HomeProducts />
