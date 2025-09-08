@@ -12,12 +12,12 @@ import SEO from "../../SEO";
 
 const Home = () => {
   return (
-    <div>
+    <section>
      <SEO
         title="Home-Guru Uruthi"
         description="Welcome to our homepage. Discover amazing products and services."
         keywords="home, products, services, company"
-        url=""
+        url="/"
      />
 
       <Header />
@@ -29,7 +29,7 @@ const Home = () => {
       <ProcessSteps />
       <HomeTestimonial/>
       <Footer />
-    </div>
+    </section>
   );
 };
 
