@@ -61,6 +61,9 @@ export default async function handler(req, res) {
     // Render React app
     const renderResult = await render(url);
 
+    if (!renderResult) {
+  throw new Error("Render function returned null or undefined");
+}
     // Handle different return formats
     let html, helmet;
     if (typeof renderResult === "string") {
