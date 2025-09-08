@@ -17,7 +17,7 @@ const Home = () => {
         title="Home-Guru Uruthi"
         description="Welcome to our homepage. Discover amazing products and services."
         keywords="home, products, services, company"
-        url="/"
+        url=""
      />
 
       <Header />
