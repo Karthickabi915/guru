@@ -9,7 +9,6 @@ import karuppu from "../../../../assets/Images/karuppu.png";
 import step1 from "../../../../assets/Images/step1.webp";
 import step2 from "../../../../assets/Images/cho.jpg";
 import packing from "../../../../assets/Images/packing.jpg";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomeCarsoual.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
