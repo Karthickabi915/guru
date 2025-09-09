@@ -421,3 +421,8 @@ text-align: center;
     height: 150px;
   }
 }
+
+
+a:hover{
+  text-decoration: none;
+}
