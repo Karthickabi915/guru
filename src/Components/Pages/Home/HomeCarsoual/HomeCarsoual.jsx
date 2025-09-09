@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel"
+import Carousel from "react-bootstrap/Carousel";
 import ExampleCarouselImage from "../../../../assets/Images/header-image-1.png";
 import ExampleCarouselImage1 from "../../../../assets/Images/header-image-2.png";
 import ExampleCarouselImage2 from "../../../../assets/Images/header-image-3.png";
@@ -9,10 +9,10 @@ import step1 from "../../../../assets/Images/step1.webp";
 import step2 from "../../../../assets/Images/cho.jpg";
 import packing from "../../../../assets/Images/packing.jpg";
 import "./HomeCarsoual.css";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import  {FaArrowRightLong}  from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { FaLeaf, FaSeedling, FaSpa } from "react-icons/fa6";
+import { FaLeaf, FaSeedling, FaSpa } from "react-icons/fa";
 
 const HomeCarsoual = () => {
   const navigate = useNavigate();
@@ -103,7 +103,7 @@ const HomeCarsoual = () => {
       </motion.div>
 
       <div className="home-container-carousel">
-        <Carousel fade>
+        <Carousel>
           <Carousel.Item>
             <div className="image-container">
               <img
@@ -115,8 +115,10 @@ const HomeCarsoual = () => {
             </div>
 
             <Carousel.Caption>
-            <div
-                
+            <motion.div
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 style={{ display: "flex", marginBottom: "20px" }}
               >
                 <span className="hero-carousel-highlight">
@@ -125,28 +127,34 @@ const HomeCarsoual = () => {
                     <FaLeaf />
                   </span>
                 </span>
-              </div>
+              </motion.div>
 
-              <h1
-               
+              <motion.h1
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="hero-carousel-title"
               >
                 Moringa <span style={{ color: "#ffffff" }}>Mittai</span>
-              </h1>
+              </motion.h1>
 
-              <h5
-               
+              <motion.h5
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="mt-3"
               >
                 Made with Moringa, Jaggery, and Elaichi. A healthy twist to
                 traditional sweetness. 🌿
-              </h5>
+              </motion.h5>
 
-              <button
-               
+              <motion.button
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="btn btn-dark text-light mt-4"
                 onClick={() => navigate("/products")}
-               
+                style={{ zIndex: 20 }}
               >
                
                   Shop Now
@@ -154,7 +162,7 @@ const HomeCarsoual = () => {
                 <span style={{ marginLeft: "10px" }}>
                   <FaArrowRightLong />
                 </span>
-              </button>
+              </motion.button>
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -168,8 +176,10 @@ const HomeCarsoual = () => {
               <div className="gradient-overlay"></div>
             </div>
             <Carousel.Caption>
-              <div
-               
+              <motion.div
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 style={{ display: "flex", marginBottom: "20px" }}
               >
                 <span className="hero-carousel-highlight">
@@ -178,25 +188,31 @@ const HomeCarsoual = () => {
                     <FaSeedling />
                   </span>
                 </span>
-              </div>
+              </motion.div>
 
-              <h1
-               
+              <motion.h1
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="hero-carousel-title"
               >
                 Karuppu Kavuni <span style={{ color: "#ffffff" }}>Mittai</span>
-              </h1>
+              </motion.h1>
 
-              <h5
-              
+              <motion.h5
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="mt-3"
               >
                 Traditional Black Rice meets natural Jaggery. A bite full of
                 taste & nutrition. 🌾
-              </h5>
+              </motion.h5>
 
-              <button
-               
+              <motion.button
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="btn btn-dark text-light mt-4"
                 onClick={() => navigate("/products")}
               >
@@ -206,11 +222,11 @@ const HomeCarsoual = () => {
                 <span style={{ marginLeft: "10px" }}>
                   <FaArrowRightLong />
                 </span>
-              </button>
+              </motion.button>
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* <Carousel.Item>
+          <Carousel.Item>
             <div className="image-container">
               <img
                 src={ExampleCarouselImage2}
@@ -269,7 +285,7 @@ const HomeCarsoual = () => {
                 </span>
               </motion.button>
             </Carousel.Caption>
-          </Carousel.Item> */}
+          </Carousel.Item>
         </Carousel>
       </div>
     </section>
