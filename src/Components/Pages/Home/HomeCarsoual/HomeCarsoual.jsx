@@ -1,5 +1,5 @@
 import React from "react";
-import {Carousel} from "react-bootstrap";
+import Carousel from "react-bootstrap/Carousel"
 import ExampleCarouselImage from "../../../../assets/Images/header-image-1.png";
 import ExampleCarouselImage1 from "../../../../assets/Images/header-image-2.png";
 import ExampleCarouselImage2 from "../../../../assets/Images/header-image-3.png";
@@ -115,10 +115,8 @@ const HomeCarsoual = () => {
             </div>
 
             <Carousel.Caption>
-            <motion.div
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+            <div
+                
                 style={{ display: "flex", marginBottom: "20px" }}
               >
                 <span className="hero-carousel-highlight">
@@ -127,34 +125,28 @@ const HomeCarsoual = () => {
                     <FaLeaf />
                   </span>
                 </span>
-              </motion.div>
+              </div>
 
-              <motion.h1
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+              <h1
+               
                 className="hero-carousel-title"
               >
                 Moringa <span style={{ color: "#ffffff" }}>Mittai</span>
-              </motion.h1>
+              </h1>
 
-              <motion.h5
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+              <h5
+               
                 className="mt-3"
               >
                 Made with Moringa, Jaggery, and Elaichi. A healthy twist to
                 traditional sweetness. 🌿
-              </motion.h5>
+              </h5>
 
-              <motion.button
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+              <button
+               
                 className="btn btn-dark text-light mt-4"
                 onClick={() => navigate("/products")}
-                style={{ zIndex: 20 }}
+               
               >
                
                   Shop Now
@@ -162,7 +154,7 @@ const HomeCarsoual = () => {
                 <span style={{ marginLeft: "10px" }}>
                   <FaArrowRightLong />
                 </span>
-              </motion.button>
+              </button>
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -176,10 +168,8 @@ const HomeCarsoual = () => {
               <div className="gradient-overlay"></div>
             </div>
             <Carousel.Caption>
-              <motion.div
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+              <div
+               
                 style={{ display: "flex", marginBottom: "20px" }}
               >
                 <span className="hero-carousel-highlight">
@@ -188,31 +178,25 @@ const HomeCarsoual = () => {
                     <FaSeedling />
                   </span>
                 </span>
-              </motion.div>
+              </div>
 
-              <motion.h1
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+              <h1
+               
                 className="hero-carousel-title"
               >
                 Karuppu Kavuni <span style={{ color: "#ffffff" }}>Mittai</span>
-              </motion.h1>
+              </h1>
 
-              <motion.h5
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+              <h5
+              
                 className="mt-3"
               >
                 Traditional Black Rice meets natural Jaggery. A bite full of
                 taste & nutrition. 🌾
-              </motion.h5>
+              </h5>
 
-              <motion.button
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+              <button
+               
                 className="btn btn-dark text-light mt-4"
                 onClick={() => navigate("/products")}
               >
@@ -222,11 +206,11 @@ const HomeCarsoual = () => {
                 <span style={{ marginLeft: "10px" }}>
                   <FaArrowRightLong />
                 </span>
-              </motion.button>
+              </button>
             </Carousel.Caption>
           </Carousel.Item>
 
-          <Carousel.Item>
+          {/* <Carousel.Item>
             <div className="image-container">
               <img
                 src={ExampleCarouselImage2}
@@ -285,7 +269,7 @@ const HomeCarsoual = () => {
                 </span>
               </motion.button>
             </Carousel.Caption>
-          </Carousel.Item>
+          </Carousel.Item> */}
         </Carousel>
       </div>
     </section>
