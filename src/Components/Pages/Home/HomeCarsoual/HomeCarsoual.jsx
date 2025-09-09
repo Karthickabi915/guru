@@ -1,4 +1,5 @@
 import React from "react";
+import {Carousel} from "react-bootstrap";
 import ExampleCarouselImage from "../../../../assets/Images/header-image-1.png";
 import ExampleCarouselImage1 from "../../../../assets/Images/header-image-2.png";
 import ExampleCarouselImage2 from "../../../../assets/Images/header-image-3.png";
@@ -102,7 +103,7 @@ const HomeCarsoual = () => {
         </motion.div>
       </motion.div>
 
-      {/* <div className="home-container-carousel">
+      <div className="home-container-carousel">
         <Carousel fade>
           <Carousel.Item>
             <div className="image-container">
@@ -115,7 +116,12 @@ const HomeCarsoual = () => {
             </div>
 
             <Carousel.Caption>
-              <motion.div style={{ display: "flex", marginBottom: "20px" }}>
+            <motion.div
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                style={{ display: "flex", marginBottom: "20px" }}
+              >
                 <span className="hero-carousel-highlight">
                   Wholesome Crunch
                   <span style={{ marginLeft: "10px" }}>
@@ -282,7 +288,7 @@ const HomeCarsoual = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </div> */}
+      </div>
     </section>
   );
 };
