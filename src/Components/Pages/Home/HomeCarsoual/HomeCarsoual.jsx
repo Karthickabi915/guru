@@ -12,7 +12,7 @@ import "./HomeCarsoual.css";
 import { Link, useNavigate } from "react-router-dom";
 import  {FaArrowRightLong}  from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { FaLeaf, FaSeedling, FaSpa } from "react-icons/fa";
+import { FaLeaf, FaSeedling, FaSpa } from "react-icons/fa6";
 
 const HomeCarsoual = () => {
   const navigate = useNavigate();
