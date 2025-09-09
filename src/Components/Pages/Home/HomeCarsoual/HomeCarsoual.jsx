@@ -5,7 +5,6 @@ import ExampleCarouselImage1 from "../../../../assets/Images/header-image-2.png"
 import ExampleCarouselImage2 from "../../../../assets/Images/header-image-3.png";
 import moringa from "../../../../assets/Images/moringa.png";
 import powder from "../../../../assets/Images/powder.jpg";
-import karuppu from "../../../../assets/Images/karuppu.png";
 import step1 from "../../../../assets/Images/step1.webp";
 import step2 from "../../../../assets/Images/cho.jpg";
 import packing from "../../../../assets/Images/packing.jpg";
@@ -157,9 +156,9 @@ const HomeCarsoual = () => {
                 onClick={() => navigate("/products")}
                 style={{ zIndex: 20 }}
               >
-                <Link to="/products" className="text-light">
+               
                   Shop Now
-                </Link>
+              
                 <span style={{ marginLeft: "10px" }}>
                   <FaArrowRightLong />
                 </span>
@@ -217,9 +216,9 @@ const HomeCarsoual = () => {
                 className="btn btn-dark text-light mt-4"
                 onClick={() => navigate("/products")}
               >
-                <Link to="/products" className="text-light">
+            
                   Order Now
-                </Link>
+           
                 <span style={{ marginLeft: "10px" }}>
                   <FaArrowRightLong />
                 </span>
@@ -278,9 +277,9 @@ const HomeCarsoual = () => {
                 onClick={() => navigate("/about")}
                 style={{ zIndex: 20 }}
               >
-                <Link to="/about" className="text-light">
+
                   Learn More
-                </Link>
+            
                 <span style={{ marginLeft: "10px" }}>
                   <FaArrowRightLong />
                 </span>
