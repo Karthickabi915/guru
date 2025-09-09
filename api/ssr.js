@@ -17,20 +17,54 @@ try {
   templateHtml = `<!DOCTYPE html><html><head><title>Error</title></head><body><h1>Template not found</h1></body></html>`;
 }
 
+// Helper function to find static files
+function findStaticFile(filename) {
+  const possibleBasePaths = [
+    path.resolve(__dirname, "../dist/client"),
+    path.resolve(__dirname, "./dist/client"),
+    path.resolve(__dirname, "dist/client"),
+    path.resolve(__dirname, "../public")
+  ];
+  
+  for (const basePath of possibleBasePaths) {
+    const fullPath = path.join(basePath, filename);
+    if (fs.existsSync(fullPath)) {
+      console.log(`Found ${filename} at:`, fullPath);
+      return fullPath;
+    }
+  }
+  
+  console.log(`${filename} not found. Searched paths:`, possibleBasePaths.map(p => path.join(p, filename)));
+  return null;
+}
+
 export default async function handler(req, res) {
   try {
     const url = req.url || "/";
+
+
       if (url === "/robots.txt" || url === "/sitemap.xml") {
-      const filePath = path.resolve(__dirname, "../dist/client" + url);
-      if (fs.existsSync(filePath)) {
-        res.setHeader(
-          "Content-Type",
-          url.endsWith(".xml") ? "application/xml" : "text/plain"
-        );
-        return fs.createReadStream(filePath).pipe(res);
+      const filename = url.substring(1); // Remove leading slash
+      const filePath = findStaticFile(filename);
+      
+      if (filePath) {
+        try {
+          const content = fs.readFileSync(filePath, "utf-8");
+          res.setHeader(
+            "Content-Type",
+            url.endsWith(".xml") ? "application/xml" : "text/plain"
+          );
+          res.statusCode = 200;
+          return res.end(content);
+        } catch (readErr) {
+          console.error(`Error reading ${filename}:`, readErr);
+          res.statusCode = 500;
+          return res.end(`Error reading ${filename} ${url}`);
+        }
       } else {
+        console.error(`${filename} not found in any expected location`);
         res.statusCode = 404;
-        return res.end("Not found");
+        return res.end(`${filename} not found`);
       }
     }
 
