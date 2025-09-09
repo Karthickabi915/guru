@@ -426,3 +426,30 @@ text-align: center;
 a:hover{
   text-decoration: none;
 }
+
+.image-container{
+  height: 100%;
+}
+
+.image-container > img{
+  height: 100%;
+}
+
+.cars{
+  height: 100%;
+}
+.home{
+  height: 100%;
+}
+.home > .slick-list{
+  height: 100%;
+}
+
+
+.home > .slick-list > .slick-track{
+  height: 100%;
+}
+
+.home > .slick-list > .slick-track >.slick-slide > div{
+  height: 100%;
+}

@@ -207,16 +207,16 @@ flex-wrap: wrap;
 
 .btn {
   padding: 1rem 1.5rem !important;
-  border-radius: 1rem;
-  font-weight: 600;
+  border-radius: 1rem !important;
+  font-weight: 600 !important;
   display: flex !important;
-  align-items: center ;
-  justify-content: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  align-items: center !important ;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
   flex: 1 !important;
   font-size: 0.95rem !important;
   color: white !important;
@@ -377,8 +377,8 @@ flex-wrap: wrap;
     height: 14rem;
   }
   .btn {
-    font-size: 0.85rem;
-    padding: 0.75rem;
+    font-size: 0.85rem !important;
+    padding: 0.75rem !important;
   }
 }
 

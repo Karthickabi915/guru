@@ -20,9 +20,23 @@ try {
 export default async function handler(req, res) {
   try {
     const url = req.url || "/";
-    
+      if (url === "/robots.txt" || url === "/sitemap.xml") {
+      const filePath = path.resolve(__dirname, "../dist/client" + url);
+      if (fs.existsSync(filePath)) {
+        res.setHeader(
+          "Content-Type",
+          url.endsWith(".xml") ? "application/xml" : "text/plain"
+        );
+        return fs.createReadStream(filePath).pipe(res);
+      } else {
+        res.statusCode = 404;
+        return res.end("Not found");
+      }
+    }
+
     console.log("Processing URL:", url);
     console.log("Current directory:", __dirname);
+
 
     const entryServerPath = path.resolve(__dirname, "../dist/server/entry-server.js");
     console.log("Looking for entry-server at:", entryServerPath);

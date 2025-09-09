@@ -115,8 +115,8 @@ const HomeCarsoual = () => {
       </motion.div>
 
    <div className="home-container-carousel">
-      <Slider {...settings}>
-        <div>
+      <Slider {...settings} className="home">
+        <div className="cars">
           <div className="image-container">
             <img src={ExampleCarouselImage} className="d-block w-100" alt="Moringa Mittai" />
             <div className="gradient-overlay"></div>
@@ -171,8 +171,8 @@ const HomeCarsoual = () => {
           </div>
         </div>
 
-        {/* Slide 2 */}
-        <div>
+     
+        <div className="cars">
           <div className="image-container">
             <img src={ExampleCarouselImage1} className="d-block w-100" alt="Karuppu Kavuni Mittai" />
             <div className="gradient-overlay"></div>
@@ -226,8 +226,8 @@ const HomeCarsoual = () => {
           </div>
         </div>
 
-        {/* Slide 3 */}
-        <div>
+  
+        <div className="cars">
           <div className="image-container">
             <img src={ExampleCarouselImage2} className="d-block w-100" alt="Guru Uruthi Snacks" />
             <div className="gradient-overlay"></div>
